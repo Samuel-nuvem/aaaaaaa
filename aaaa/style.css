@@ -1,0 +1,125 @@
+/* Estilos Globais - Melhorados para UX e Acessibilidade */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth; /* Scroll suave nativo */
+}
+
+body {
+    font-size: 1.1rem; /* Fonte geral aumentada */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Suporte a Dark Mode (melhoria extra: detecta preferência do usuário) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    .bg-light {
+        background-color: #1e1e1e !important;
+    }
+    .card {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+        border-color: #333;
+    }
+    .hero {
+        background: linear-gradient(135deg, #0056b3, #004085);
+    }
+}
+
+/* Títulos Aumentados */
+h1 {
+    font-size: 3rem; /* Hero title maior */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.25rem; /* Seções maiores */
+    margin-bottom: 1.5rem;
+}
+
+h3, h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand, .nav-link {
+    font-size: 1.15rem; /* Navbar maior */
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important; /* Amarelo suave no hover para destaque */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradiente para modernidade */
+    color: white;
+    padding: 120px 0; /* Padding maior para impacto */
+    margin-top: 72px; /* Espaço para navbar fixed */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>'); /* Textura sutil (melhoria visual) */
+    opacity: 0.5;
+}
+
+.hero .lead {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+/* Seções Gerais */
+.py-5 {
+    padding: 5rem 0;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* Botões - Maiores e com Hover Desaturação */
+.btn {
+    font-size: 1.1rem; /* Base maior */
+    padding: 12px 30px; /* Padding aumentado */
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Transição suave */
+    font-weight: 500;
+    border: none; /* Remove bordas padrão para clean look */
+    position: relative; /* Para loader spinner */
+}
+
+.btn-lg {
+    font-size: 1.2rem;
+    padding: 15px 35px; /* Botões grandes ainda maiores */
+}
+
+.btn:hover {
+    filter: saturate(0.7); /* Desaturação no hover (solicitado) */
+    transform: scale(1.05); /* Leve zoom (melhoria extra) */
+    box-shadow: 0 4px 12px
+}
